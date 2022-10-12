@@ -204,16 +204,17 @@
                                     <action selector="pressButton:" destination="St1-wO-XzE" eventType="touchUpInside" id="pSK-x1-2sT"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OEw-tv-9Vd">
-                                <rect key="frame" x="190" y="780.66666666666663" width="50" height="50"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OEw-tv-9Vd">
+                                <rect key="frame" x="20" y="781" width="390" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="NJz-xV-7KQ"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="NJz-xV-7KQ"/>
                                     <constraint firstAttribute="height" constant="50" id="zhv-cN-jCB"/>
                                 </constraints>
                                 <attributedString key="attributedText">
                                     <fragment content="Label">
                                         <attributes>
                                             <font key="NSFont" metaFont="system" size="17"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
@@ -243,7 +244,7 @@
                         <constraints>
                             <constraint firstItem="rE3-U8-DIu" firstAttribute="top" secondItem="kPP-Va-hzj" secondAttribute="bottom" constant="35" id="0xD-4B-Ab6"/>
                             <constraint firstItem="Rnn-pa-gxw" firstAttribute="top" secondItem="2e4-Ss-4zm" secondAttribute="bottom" constant="35" id="1kG-6K-Bit"/>
-                            <constraint firstItem="KTd-Bz-HJI" firstAttribute="trailing" secondItem="OEw-tv-9Vd" secondAttribute="trailing" constant="190" id="6OJ-Wv-shR"/>
+                            <constraint firstItem="KTd-Bz-HJI" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="OEw-tv-9Vd" secondAttribute="trailing" constant="190" id="6OJ-Wv-shR"/>
                             <constraint firstItem="b6M-rw-MLy" firstAttribute="top" secondItem="kmz-Ne-wrH" secondAttribute="bottom" constant="60" id="8TW-C7-aaa" userLabel="4.top = Game started  .bottom + 35"/>
                             <constraint firstItem="26w-CS-O3a" firstAttribute="leading" secondItem="edm-FK-CcN" secondAttribute="trailing" constant="20" id="9RG-dC-7pA"/>
                             <constraint firstItem="pVZ-La-Uju" firstAttribute="top" secondItem="7gi-T5-NaM" secondAttribute="bottom" constant="35" id="9wr-VQ-s9I"/>
@@ -263,7 +264,7 @@
                             <constraint firstItem="2e4-Ss-4zm" firstAttribute="top" secondItem="s8m-f4-c5M" secondAttribute="bottom" constant="35" id="PtE-NN-Nfv"/>
                             <constraint firstItem="Tab-Ut-l0h" firstAttribute="leading" secondItem="KTd-Bz-HJI" secondAttribute="leading" constant="35" id="SN3-MI-DpE"/>
                             <constraint firstItem="kPP-Va-hzj" firstAttribute="top" secondItem="sI5-o3-y4j" secondAttribute="bottom" constant="35" id="SxM-sK-INz"/>
-                            <constraint firstItem="OEw-tv-9Vd" firstAttribute="leading" secondItem="KTd-Bz-HJI" secondAttribute="leading" constant="190" id="U0B-wo-ohe"/>
+                            <constraint firstItem="OEw-tv-9Vd" firstAttribute="leading" relation="lessThanOrEqual" secondItem="KTd-Bz-HJI" secondAttribute="leading" constant="190" id="U0B-wo-ohe"/>
                             <constraint firstItem="Sh7-zR-eby" firstAttribute="leading" secondItem="lB1-Om-RYH" secondAttribute="trailing" constant="20" id="VUl-Bn-fdm"/>
                             <constraint firstItem="7gi-T5-NaM" firstAttribute="leading" secondItem="ZXC-d5-oQ2" secondAttribute="trailing" constant="20" id="VzC-3f-co2"/>
                             <constraint firstItem="rE3-U8-DIu" firstAttribute="leading" secondItem="Sh7-zR-eby" secondAttribute="trailing" constant="20" id="Yt0-8j-M0o"/>
@@ -291,6 +292,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="MainInscription" destination="kmz-Ne-wrH" id="Ac2-a6-QTP"/>
                         <outlet property="NextDigit" destination="j9E-dZ-gJy" id="Irf-dO-eei"/>
                         <outlet property="NumberOf" destination="OEw-tv-9Vd" id="gDx-WJ-upC"/>
                         <outletCollection property="buttons" destination="edm-FK-CcN" collectionClass="NSMutableArray" id="fda-Rb-cKM"/>

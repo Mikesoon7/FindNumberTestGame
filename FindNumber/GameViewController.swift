@@ -9,8 +9,11 @@ import UIKit
 
 class GameViewController: UIViewController {
     
+
+    
     @IBOutlet var buttons: [UIButton]!
     
+    @IBOutlet weak var MainInscription: UILabel!
     @IBOutlet weak var NumberOf: UILabel!
     
     @IBOutlet weak var NextDigit: UILabel!
@@ -21,6 +24,8 @@ class GameViewController: UIViewController {
         super.viewDidLoad()
         
         setupScreen()
+        
+        NumberOf.text = "Which number it'll be?"
         
     }
     @IBAction func pressButton(_ sender: UIButton){
@@ -39,7 +44,6 @@ class GameViewController: UIViewController {
             buttons[index].setTitle(game.items[index].title, for: .normal)
             buttons[index].isHidden = false
         }
-        
         NextDigit.text = game.nextItem?.title
     }
     private func updateUi(){
@@ -48,6 +52,11 @@ class GameViewController: UIViewController {
             
         }
         NextDigit.text = game.nextItem?.title
+        
+        if game.gameStatus == .Win{
+            MainInscription.text = "Congratulations"
+        }
     }
+    
     
 }
