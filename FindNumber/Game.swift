@@ -9,8 +9,8 @@ import Foundation
 
 enum StatusGame{
     case Start
-    
     case Win
+    case lose
 }
 
 
@@ -21,6 +21,8 @@ class Game{
         var title : String
         
         var isFound : Bool = false
+        
+        var isError = false
     }
     
     private let data = Array(1...99)
@@ -28,33 +30,87 @@ class Game{
     internal var items : [Item] = []
     
     private var countItems : Int
+    private var timeForGame: Int
+    private var secondsGame : Int{
+        didSet{
+            if secondsGame == 0{
+                gameStatus = .lose
+            }
+            updateTimer(gameStatus, secondsGame)
+        }
+    }
     
-    var gameStatus: StatusGame = .Start
+    var gameStatus: StatusGame = .Start{
+        didSet{
+            if gameStatus != .Start{
+                stopGame()
+            }
+        }
+    }
+    
+    private var timer: Timer?
     
     var nextItem: Item?
-    init(countItem: Int){
+    private var updateTimer: ((StatusGame, Int) -> ())
+    
+    init(countItem: Int, time: Int, updateTimer: @escaping ( _ status: StatusGame, _ seconds: Int) -> Void){
         self.countItems = countItem
+        self.timeForGame = time
+        self.secondsGame = time
+        self.updateTimer = updateTimer
         setupGame()
     }
     
     private func setupGame(){
         var digits = data.shuffled()
-        
+        items.removeAll()
         while items.count < countItems{
             let item = Item(title: String(digits.removeFirst()))
             items.append(item)
         }
         
+        updateTimer(gameStatus, secondsGame)
+        
+        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { [weak self]( _ ) in
+            self?.secondsGame -= 1
+        } )
+        
         nextItem = items.shuffled().first
+        
+        
     }
     func check(index: Int){
+        
+        guard gameStatus == .Start else {return}
         if items[index].title == nextItem?.title{
             items[index].isFound = true
             
             nextItem = items.shuffled().first(where: { (item) -> Bool in item.isFound == false})
+        } else {
+            items[index].isError = true
         }
         if nextItem == nil{
             gameStatus = .Win
         }
+    }
+    private func stopGame(){
+        timer?.invalidate()
+    }
+    func newGame(){
+        gameStatus = .Start
+        self.secondsGame = self.timeForGame
+        setupGame()
+        
+    }
+}
+
+
+
+extension Int{
+    func secondsToString() -> String{
+        let minutes = self / 60
+        let seconds = self % 60
+        
+        return String(format: "%d:%02d", minutes, seconds)
     }
 }

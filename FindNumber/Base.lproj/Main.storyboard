@@ -204,22 +204,6 @@
                                     <action selector="pressButton:" destination="St1-wO-XzE" eventType="touchUpInside" id="pSK-x1-2sT"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OEw-tv-9Vd">
-                                <rect key="frame" x="20" y="781" width="390" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="NJz-xV-7KQ"/>
-                                    <constraint firstAttribute="height" constant="50" id="zhv-cN-jCB"/>
-                                </constraints>
-                                <attributedString key="attributedText">
-                                    <fragment content="Label">
-                                        <attributes>
-                                            <font key="NSFont" metaFont="system" size="17"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lB1-Om-RYH">
                                 <rect key="frame" x="130" y="505.66666666666674" width="75" height="75"/>
                                 <constraints>
@@ -238,6 +222,39 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jet-Il-amg">
+                                <rect key="frame" x="15" y="615.66666666666663" width="400" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="400" id="Soh-uk-4dT" userLabel="width = 400"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rKW-s2-7IH">
+                                <rect key="frame" x="140.66666666666666" y="745.66666666666663" width="148.99999999999997" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Start New Game"/>
+                                <connections>
+                                    <action selector="NewGame:" destination="St1-wO-XzE" eventType="touchUpInside" id="XnJ-ce-fJe"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OEw-tv-9Vd">
+                                <rect key="frame" x="165" y="660.66666666666663" width="100" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="NJz-xV-7KQ"/>
+                                    <constraint firstAttribute="height" constant="50" id="zhv-cN-jCB"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="Label">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="17"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="KTd-Bz-HJI"/>
                         <color key="backgroundColor" red="0.75168886811462876" green="0.75168886811462876" blue="0.75168886811462876" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -249,6 +266,8 @@
                             <constraint firstItem="26w-CS-O3a" firstAttribute="leading" secondItem="edm-FK-CcN" secondAttribute="trailing" constant="20" id="9RG-dC-7pA"/>
                             <constraint firstItem="pVZ-La-Uju" firstAttribute="top" secondItem="7gi-T5-NaM" secondAttribute="bottom" constant="35" id="9wr-VQ-s9I"/>
                             <constraint firstItem="kmz-Ne-wrH" firstAttribute="centerX" secondItem="KTd-Bz-HJI" secondAttribute="centerX" id="A1Q-aL-HTz"/>
+                            <constraint firstItem="jet-Il-amg" firstAttribute="centerX" secondItem="KTd-Bz-HJI" secondAttribute="centerX" id="AJl-pu-dj9"/>
+                            <constraint firstItem="jet-Il-amg" firstAttribute="top" secondItem="Tab-Ut-l0h" secondAttribute="bottom" constant="35" id="EV1-xb-txf"/>
                             <constraint firstItem="Tab-Ut-l0h" firstAttribute="top" secondItem="I5M-Gk-OBy" secondAttribute="bottom" constant="35" id="FdR-Mv-ejp"/>
                             <constraint firstItem="lB1-Om-RYH" firstAttribute="leading" secondItem="Tab-Ut-l0h" secondAttribute="trailing" constant="20" id="FiV-Q5-x05"/>
                             <constraint firstItem="7gi-T5-NaM" firstAttribute="top" secondItem="26w-CS-O3a" secondAttribute="bottom" constant="35" id="I3J-c1-foA"/>
@@ -256,7 +275,7 @@
                             <constraint firstItem="edm-FK-CcN" firstAttribute="top" secondItem="kmz-Ne-wrH" secondAttribute="bottom" constant="60" id="Klg-Or-cs9" userLabel="1.top = Game started  .bottom + 35"/>
                             <constraint firstItem="pVZ-La-Uju" firstAttribute="leading" secondItem="I5M-Gk-OBy" secondAttribute="trailing" constant="20" id="LrU-h2-Duo"/>
                             <constraint firstItem="kmz-Ne-wrH" firstAttribute="top" secondItem="KTd-Bz-HJI" secondAttribute="top" constant="30" id="Lsm-RS-bvc"/>
-                            <constraint firstItem="OEw-tv-9Vd" firstAttribute="top" secondItem="lB1-Om-RYH" secondAttribute="bottom" constant="200" id="MAG-ov-zeu"/>
+                            <constraint firstItem="OEw-tv-9Vd" firstAttribute="top" secondItem="lB1-Om-RYH" secondAttribute="bottom" constant="80" id="MAG-ov-zeu"/>
                             <constraint firstItem="I5M-Gk-OBy" firstAttribute="top" secondItem="ZXC-d5-oQ2" secondAttribute="bottom" constant="35" id="Md8-14-Ib5"/>
                             <constraint firstItem="pVZ-La-Uju" firstAttribute="top" secondItem="7gi-T5-NaM" secondAttribute="bottom" constant="35" id="N75-rY-E2w"/>
                             <constraint firstItem="b6M-rw-MLy" firstAttribute="leading" secondItem="s8m-f4-c5M" secondAttribute="trailing" constant="20" id="NPU-wo-sgx"/>
@@ -267,8 +286,10 @@
                             <constraint firstItem="OEw-tv-9Vd" firstAttribute="leading" relation="lessThanOrEqual" secondItem="KTd-Bz-HJI" secondAttribute="leading" constant="190" id="U0B-wo-ohe"/>
                             <constraint firstItem="Sh7-zR-eby" firstAttribute="leading" secondItem="lB1-Om-RYH" secondAttribute="trailing" constant="20" id="VUl-Bn-fdm"/>
                             <constraint firstItem="7gi-T5-NaM" firstAttribute="leading" secondItem="ZXC-d5-oQ2" secondAttribute="trailing" constant="20" id="VzC-3f-co2"/>
+                            <constraint firstItem="rKW-s2-7IH" firstAttribute="top" secondItem="OEw-tv-9Vd" secondAttribute="bottom" constant="35" id="YWT-2M-xCA"/>
                             <constraint firstItem="rE3-U8-DIu" firstAttribute="leading" secondItem="Sh7-zR-eby" secondAttribute="trailing" constant="20" id="Yt0-8j-M0o"/>
                             <constraint firstItem="j9E-dZ-gJy" firstAttribute="leading" secondItem="KTd-Bz-HJI" secondAttribute="leading" constant="35" id="asM-Xl-AWq"/>
+                            <constraint firstItem="rKW-s2-7IH" firstAttribute="centerX" secondItem="KTd-Bz-HJI" secondAttribute="centerX" id="az9-TP-AgC"/>
                             <constraint firstItem="OEw-tv-9Vd" firstAttribute="centerX" secondItem="KTd-Bz-HJI" secondAttribute="centerX" id="baU-88-eS4"/>
                             <constraint firstItem="pVZ-La-Uju" firstAttribute="leading" secondItem="I5M-Gk-OBy" secondAttribute="trailing" constant="20" id="ban-Bv-gIh"/>
                             <constraint firstItem="sI5-o3-y4j" firstAttribute="top" secondItem="b6M-rw-MLy" secondAttribute="bottom" constant="35" id="ccn-OI-w95"/>
@@ -295,6 +316,8 @@
                         <outlet property="MainInscription" destination="kmz-Ne-wrH" id="Ac2-a6-QTP"/>
                         <outlet property="NextDigit" destination="j9E-dZ-gJy" id="Irf-dO-eei"/>
                         <outlet property="NumberOf" destination="OEw-tv-9Vd" id="gDx-WJ-upC"/>
+                        <outlet property="TimeLabel" destination="jet-Il-amg" id="mzS-Hw-P6f"/>
+                        <outlet property="newGameButton" destination="rKW-s2-7IH" id="0NV-OG-hAo"/>
                         <outletCollection property="buttons" destination="edm-FK-CcN" collectionClass="NSMutableArray" id="fda-Rb-cKM"/>
                         <outletCollection property="buttons" destination="26w-CS-O3a" collectionClass="NSMutableArray" id="hPz-Q4-jha"/>
                         <outletCollection property="buttons" destination="s8m-f4-c5M" collectionClass="NSMutableArray" id="AG2-Ha-7rN"/>

@@ -11,6 +11,7 @@ class GameViewController: UIViewController {
     
 
     
+    @IBOutlet weak var newGameButton: UIButton!
     @IBOutlet var buttons: [UIButton]!
     
     @IBOutlet weak var MainInscription: UILabel!
@@ -18,7 +19,13 @@ class GameViewController: UIViewController {
     
     @IBOutlet weak var NextDigit: UILabel!
     
-    lazy var game = Game(countItem: buttons.count)
+    lazy var game = Game(countItem: buttons.count, time: 60, updateTimer: { [weak self](gameStatus, time) in
+        
+        guard let self = self else {return}
+        self.TimeLabel.text = time.secondsToString()
+        self.updateInfoGame(with: gameStatus)
+        
+    })
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,16 +35,22 @@ class GameViewController: UIViewController {
         NumberOf.text = "Which number it'll be?"
         
     }
+    @IBOutlet weak var TimeLabel: UILabel!
     @IBAction func pressButton(_ sender: UIButton){
         guard let buttonIndex = buttons.firstIndex(of: sender) else {return}
         game.check(index:buttonIndex)
-        sender.tintColor = .black
         
         NumberOf.text = sender.title(for: sender.state)
         
         updateUi()
     }
     
+    @IBAction func NewGame(_ sender: UIButton) {
+        game.newGame()
+        sender.isHidden = true
+        setupScreen()
+        
+    }
     internal func setupScreen(){
         
         for index in game.items.indices{
@@ -49,14 +62,31 @@ class GameViewController: UIViewController {
     private func updateUi(){
         for index in game.items.indices{
             buttons[index].isHidden = game.items[index].isFound
-            
+            if game.items[index].isError{
+                UIView.animate(withDuration: 1) { [weak self] in
+                    self?.buttons[index].tintColor = .red
+                } completion: { [weak self](_) in
+                    self?.buttons[index].tintColor = .systemBlue
+                    self?.game.items[index].isError = false
+                }
+            }
         }
         NextDigit.text = game.nextItem?.title
         
-        if game.gameStatus == .Win{
-            MainInscription.text = "Congratulations"
-        }
+        updateInfoGame(with: game.gameStatus)
     }
     
-    
+    private func updateInfoGame(with status: StatusGame){
+        switch status{
+        case .Start: MainInscription.text = "Game Started"
+            newGameButton.isHidden = true
+        case .Win: MainInscription.text = "Congratulations"
+            MainInscription.textColor = .green
+            newGameButton.isHidden = false
+        case .lose: MainInscription.text = "Don't give up. Try one more time"
+            MainInscription.textColor = .red
+            newGameButton.isHidden = false
+
+        }
+    }
 }
