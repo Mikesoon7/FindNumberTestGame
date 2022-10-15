@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9A253F1D28F9419F0028A1F8 /* YellowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A253F1C28F9419F0028A1F8 /* YellowViewController.swift */; };
-		9A253F2128F947A10028A1F8 /* BlueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A253F2028F947A10028A1F8 /* BlueViewController.swift */; };
-		9A253F2328F94A980028A1F8 /* GreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A253F2228F94A980028A1F8 /* GreenViewController.swift */; };
 		9A6F75D928F4100400C29045 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6F75D828F4100400C29045 /* AppDelegate.swift */; };
 		9A6F75DB28F4100400C29045 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6F75DA28F4100400C29045 /* SceneDelegate.swift */; };
 		9A6F75DD28F4100400C29045 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6F75DC28F4100400C29045 /* ViewController.swift */; };
@@ -19,7 +16,10 @@
 		9A6F75F028F4100700C29045 /* FindNumberTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6F75EF28F4100700C29045 /* FindNumberTests.swift */; };
 		9A6F75FA28F4100700C29045 /* FindNumberUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6F75F928F4100700C29045 /* FindNumberUITests.swift */; };
 		9A6F75FC28F4100700C29045 /* FindNumberUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6F75FB28F4100700C29045 /* FindNumberUITestsLaunchTests.swift */; };
+		9A8266D028F97FF200867F53 /* SelectTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8266CF28F97FF200867F53 /* SelectTimeViewController.swift */; };
+		9A8266D428F9807500867F53 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8266D328F9807500867F53 /* SettingsTableViewController.swift */; };
 		9A86316628F6CFBE0058D53B /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A86316528F6CFBE0058D53B /* Game.swift */; };
+		9AAD221B28F98A51004BA4CC /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAD221A28F98A51004BA4CC /* Settings.swift */; };
 		9AD03A8C28F5B4A2000277E8 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD03A8B28F5B4A2000277E8 /* GameViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,9 +41,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		9A253F1C28F9419F0028A1F8 /* YellowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YellowViewController.swift; sourceTree = "<group>"; };
-		9A253F2028F947A10028A1F8 /* BlueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueViewController.swift; sourceTree = "<group>"; };
-		9A253F2228F94A980028A1F8 /* GreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenViewController.swift; sourceTree = "<group>"; };
 		9A6F75D528F4100400C29045 /* FindNumber.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindNumber.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A6F75D828F4100400C29045 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9A6F75DA28F4100400C29045 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,7 +54,10 @@
 		9A6F75F528F4100700C29045 /* FindNumberUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FindNumberUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A6F75F928F4100700C29045 /* FindNumberUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindNumberUITests.swift; sourceTree = "<group>"; };
 		9A6F75FB28F4100700C29045 /* FindNumberUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindNumberUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9A8266CF28F97FF200867F53 /* SelectTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTimeViewController.swift; sourceTree = "<group>"; };
+		9A8266D328F9807500867F53 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		9A86316528F6CFBE0058D53B /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		9AAD221A28F98A51004BA4CC /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		9AD03A8B28F5B4A2000277E8 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -118,9 +118,9 @@
 				9A6F75E628F4100700C29045 /* Info.plist */,
 				9AD03A8B28F5B4A2000277E8 /* GameViewController.swift */,
 				9A86316528F6CFBE0058D53B /* Game.swift */,
-				9A253F1C28F9419F0028A1F8 /* YellowViewController.swift */,
-				9A253F2028F947A10028A1F8 /* BlueViewController.swift */,
-				9A253F2228F94A980028A1F8 /* GreenViewController.swift */,
+				9A8266CF28F97FF200867F53 /* SelectTimeViewController.swift */,
+				9A8266D328F9807500867F53 /* SettingsTableViewController.swift */,
+				9AAD221A28F98A51004BA4CC /* Settings.swift */,
 			);
 			path = FindNumber;
 			sourceTree = "<group>";
@@ -274,13 +274,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				9AD03A8C28F5B4A2000277E8 /* GameViewController.swift in Sources */,
+				9A8266D028F97FF200867F53 /* SelectTimeViewController.swift in Sources */,
+				9AAD221B28F98A51004BA4CC /* Settings.swift in Sources */,
 				9A86316628F6CFBE0058D53B /* Game.swift in Sources */,
 				9A6F75DD28F4100400C29045 /* ViewController.swift in Sources */,
 				9A6F75D928F4100400C29045 /* AppDelegate.swift in Sources */,
-				9A253F2328F94A980028A1F8 /* GreenViewController.swift in Sources */,
-				9A253F1D28F9419F0028A1F8 /* YellowViewController.swift in Sources */,
 				9A6F75DB28F4100400C29045 /* SceneDelegate.swift in Sources */,
-				9A253F2128F947A10028A1F8 /* BlueViewController.swift in Sources */,
+				9A8266D428F9807500867F53 /* SettingsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

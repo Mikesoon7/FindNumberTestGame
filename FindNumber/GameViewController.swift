@@ -19,7 +19,7 @@ class GameViewController: UIViewController {
     
     @IBOutlet weak var NextDigit: UILabel!
     
-    lazy var game = Game(countItem: buttons.count, time: 60, updateTimer: { [weak self](gameStatus, time) in
+    lazy var game = Game(countItem: buttons.count, updateTimer: { [weak self](gameStatus, time) in
         
         guard let self = self else {return}
         self.TimeLabel.text = time.secondsToString()
@@ -27,6 +27,10 @@ class GameViewController: UIViewController {
         
     })
 
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        game.stopGame()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
