@@ -10,7 +10,7 @@ import UIKit
 class GameViewController: UIViewController {
     
 
-    
+    // MARK: Properties. -
     @IBOutlet weak var newGameButton: UIButton!
     @IBOutlet var buttons: [UIButton]!
     
@@ -18,7 +18,10 @@ class GameViewController: UIViewController {
     @IBOutlet weak var NumberOf: UILabel!
     
     @IBOutlet weak var NextDigit: UILabel!
+    @IBOutlet weak var TimeLabel: UILabel!
     
+    
+    // MARK: - Properties with observers.
     lazy var game = Game(countItem: buttons.count, updateTimer: { [weak self](gameStatus, time) in
         
         guard let self = self else {return}
@@ -39,7 +42,6 @@ class GameViewController: UIViewController {
         NumberOf.text = "Which number it'll be?"
         
     }
-    @IBOutlet weak var TimeLabel: UILabel!
     @IBAction func pressButton(_ sender: UIButton){
         guard let buttonIndex = buttons.firstIndex(of: sender) else {return}
         game.check(index:buttonIndex)
