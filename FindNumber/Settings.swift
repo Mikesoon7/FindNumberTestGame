@@ -9,6 +9,8 @@ import Foundation
 
 enum KeyUserDefaults{
     static let settingsGame = "settingsGame"
+    static let recordGame = "recordGame"
+
 }
 
 struct SettingsGame: Codable{

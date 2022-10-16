@@ -46,7 +46,7 @@
                                             <fontDescription key="titleFontDescription" type="system" pointSize="27"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <segue destination="3ue-tz-mqF" kind="show" id="Htr-an-oUR"/>
+                                            <segue destination="u49-Jd-PBP" kind="presentation" id="Htr-an-oUR"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -323,6 +323,7 @@
                         <outletCollection property="buttons" destination="Tab-Ut-l0h" collectionClass="NSMutableArray" id="ZbG-9V-ETC"/>
                         <outletCollection property="buttons" destination="lB1-Om-RYH" collectionClass="NSMutableArray" id="YWf-gP-KRq"/>
                         <outletCollection property="buttons" destination="rE3-U8-DIu" collectionClass="NSMutableArray" id="pP3-j5-Tja"/>
+                        <segue destination="u49-Jd-PBP" kind="presentation" identifier="recordVC" id="HrX-h9-92f"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HXH-Wr-6ve" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -520,20 +521,56 @@
         <!--Best Results-->
         <scene sceneID="DXF-lO-0yx">
             <objects>
-                <viewController id="3ue-tz-mqF" sceneMemberID="viewController">
+                <viewController id="3ue-tz-mqF" customClass="RecordViewController" customModule="FindNumber" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="slv-dq-et6">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="863"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kc0-Vz-xy7">
+                                <rect key="frame" x="180.66666666666666" y="442.33333333333331" width="68.666666666666657" height="34.666666666666686"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="J5u-pd-28X"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="kc0-Vz-xy7" firstAttribute="centerY" secondItem="J5u-pd-28X" secondAttribute="centerY" id="Gb2-7E-Phw"/>
+                            <constraint firstItem="kc0-Vz-xy7" firstAttribute="centerX" secondItem="J5u-pd-28X" secondAttribute="centerX" id="Mfd-uk-8tE"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Best Results" id="nh7-d0-JjY"/>
+                    <connections>
+                        <outlet property="recordLabel" destination="kc0-Vz-xy7" id="i8Q-d0-SYX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ddd-IZ-OKD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1898" y="-62"/>
+            <point key="canvasLocation" x="2796.2790697674418" y="-62.446351931330476"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="nC2-t3-Npf">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="u49-Jd-PBP" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="IBD-aB-59P">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="3ue-tz-mqF" kind="relationship" relationship="rootViewController" id="mwc-MC-vcl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sAc-BZ-bTw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1986" y="-62"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="HrX-h9-92f"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>

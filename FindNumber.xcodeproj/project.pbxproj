@@ -20,6 +20,7 @@
 		9A8266D428F9807500867F53 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8266D328F9807500867F53 /* SettingsTableViewController.swift */; };
 		9A86316628F6CFBE0058D53B /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A86316528F6CFBE0058D53B /* Game.swift */; };
 		9AAD221B28F98A51004BA4CC /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAD221A28F98A51004BA4CC /* Settings.swift */; };
+		9AAD221F28FAA106004BA4CC /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAD221E28FAA106004BA4CC /* RecordViewController.swift */; };
 		9AD03A8C28F5B4A2000277E8 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD03A8B28F5B4A2000277E8 /* GameViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +59,7 @@
 		9A8266D328F9807500867F53 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		9A86316528F6CFBE0058D53B /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		9AAD221A28F98A51004BA4CC /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		9AAD221E28FAA106004BA4CC /* RecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
 		9AD03A8B28F5B4A2000277E8 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -121,6 +123,7 @@
 				9A8266CF28F97FF200867F53 /* SelectTimeViewController.swift */,
 				9A8266D328F9807500867F53 /* SettingsTableViewController.swift */,
 				9AAD221A28F98A51004BA4CC /* Settings.swift */,
+				9AAD221E28FAA106004BA4CC /* RecordViewController.swift */,
 			);
 			path = FindNumber;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 				9AD03A8C28F5B4A2000277E8 /* GameViewController.swift in Sources */,
 				9A8266D028F97FF200867F53 /* SelectTimeViewController.swift in Sources */,
 				9AAD221B28F98A51004BA4CC /* Settings.swift in Sources */,
+				9AAD221F28FAA106004BA4CC /* RecordViewController.swift in Sources */,
 				9A86316628F6CFBE0058D53B /* Game.swift in Sources */,
 				9A6F75DD28F4100400C29045 /* ViewController.swift in Sources */,
 				9A6F75D928F4100400C29045 /* AppDelegate.swift in Sources */,
@@ -480,7 +484,7 @@
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -514,7 +518,7 @@
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
